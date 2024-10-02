@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pays & Régions - RP Géopolitique 1803</title>
+  <!-- Tailwind CDN pour les styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- En-tête -->
+    <header class="bg-gradient-to-r from-blue-900 to-gray-900 text-white shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4 md:px-8">
+            <h1 class="text-4xl font-bold mb-4 md:mb-0">RP Géopolitique : Pays & Régions</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:underline">Accueil</a></li>
+                    <li><a href="carte.html" class="hover:underline">Carte Interactive</a></li>
+                    <li><a href="economie.html" class="hover:underline">Économie</a></li>
+                    <li><a href="commerce.html" class="hover:underline">Commerce</a></li>
+                    <li><a href="salons.html" class="hover:underline">Salons Privés</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des pays -->
+    <section class="bg-white py-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Tous les pays disponibles</h2>
+
+            <!-- Tableau des pays -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="paysContainer">
+                <!-- 27 pays disponibles -->
+                <!-- Exemple pour l'Empire Ottoman -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Empire Ottoman</h3>
+                    <p class="text-gray-600">Population : 25,000,000</p>
+                    <p class="text-gray-600">Type : Empire</p>
+                    <a href="details-ottoman.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Empire Français</h3>
+                    <p class="text-gray-600">Population : 30,000,000</p>
+                    <p class="text-gray-600">Type : Empire</p>
+                    <a href="details-france.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Empire de Russie</h3>
+                    <p class="text-gray-600">Population : 40,000,000</p>
+                    <p class="text-gray-600">Type : Empire</p>
+                    <a href="details-russie.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Bavière</h3>
+                    <p class="text-gray-600">Population : 4,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-baviere.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume d'Espagne</h3>
+                    <p class="text-gray-600">Population : 11,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-espagne.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume-Uni</h3>
+                    <p class="text-gray-600">Population : 18,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-royaume-uni.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Prusse</h3>
+                    <p class="text-gray-600">Population : 10,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-prusse.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Naples</h3>
+                    <p class="text-gray-600">Population : 3,500,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-naples.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Saxe</h3>
+                    <p class="text-gray-600">Population : 2,500,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-saxe.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Papauté de Rome</h3>
+                    <p class="text-gray-600">Population : 400,000</p>
+                    <p class="text-gray-600">Type : Papauté</p>
+                    <a href="details-papaut.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Confédération de Suisse</h3>
+                    <p class="text-gray-600">Population : 1,000,000</p>
+                    <p class="text-gray-600">Type : Confédération</p>
+                    <a href="details-suisse.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Duché d'Oldenbourg</h3>
+                    <p class="text-gray-600">Population : 200,000</p>
+                    <p class="text-gray-600">Type : Duché</p>
+                    <a href="details-oldenbourg.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Electorat de Bade</h3>
+                    <p class="text-gray-600">Population : 1,000,000</p>
+                    <p class="text-gray-600">Type : Electorat</p>
+                    <a href="details-bade.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Electorat de Brunswick-Lunebourg</h3>
+                    <p class="text-gray-600">Population : 500,000</p>
+                    <p class="text-gray-600">Type : Electorat</p>
+                    <a href="details-brunswick.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Electorat de Würtemberg</h3>
+                    <p class="text-gray-600">Population : 600,000</p>
+                    <p class="text-gray-600">Type : Electorat</p>
+                    <a href="details-wurtemberg.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Landgraviat de Hesse-Cassel</h3>
+                    <p class="text-gray-600">Population : 300,000</p>
+                    <p class="text-gray-600">Type : Landgraviat</p>
+                    <a href="details-hesse.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Sicile</h3>
+                    <p class="text-gray-600">Population : 1,200,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-sicile.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Sardaigne</h3>
+                    <p class="text-gray-600">Population : 1,400,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-sardaigne.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Mecklembourg-Strelitz</h3>
+                    <p class="text-gray-600">Population : 300,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-mecklembourg.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Pays-Bas</h3>
+                    <p class="text-gray-600">Population : 2,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-pays-bas.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Danemark-Norvège</h3>
+                    <p class="text-gray-600">Population : 2,500,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-danemark-norvege.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> République d'Italie</h3>
+                    <p class="text-gray-600">Population : 5,000,000</p>
+                    <p class="text-gray-600">Type : République</p>
+                    <a href="details-italie.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Empire d'Autriche</h3>
+                    <p class="text-gray-600">Population : 20,000,000</p>
+                    <p class="text-gray-600">Type : Empire</p>
+                    <a href="details-autriche.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <!-- Empire de Perse -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Empire de Perse</h3>
+                    <p class="text-gray-600">Population : 6,000,000</p>
+                    <p class="text-gray-600">Type : Empire</p>
+                    <a href="details-perse.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <!-- Royaume de Portugal -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Portugal</h3>
+                    <p class="text-gray-600">Population : 3,000,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-portugal.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <!-- Royaume de Suède -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Suède</h3>
+                    <p class="text-gray-600">Population : 2,500,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-suede.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+                
+                <!-- Royaume de Westphalie -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-crown text-yellow-500"></i> Royaume de Westphalie</h3>
+                    <p class="text-gray-600">Population : 1,500,000</p>
+                    <p class="text-gray-600">Type : Royaume</p>
+                    <a href="details-westphalie.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Voir les détails</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 RP Géopolitique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

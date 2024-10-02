@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royaume de Bavière - RP Géopolitique 1803</title>
+  <!-- Tailwind CDN pour les styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Chart.js pour les graphiques -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- En-tête -->
+    <header class="bg-gradient-to-r from-blue-900 to-gray-900 text-white shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4 md:px-8">
+            <h1 class="text-4xl font-bold mb-4 md:mb-0">RP Géopolitique : Royaume de Bavière</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:underline">Accueil</a></li>
+                    <li><a href="pays-regions.html" class="hover:underline">Pays & Régions</a></li>
+                    <li><a href="carte.html" class="hover:underline">Carte Interactive</a></li>
+                    <li><a href="economie.html" class="hover:underline">Économie</a></li>
+                    <li><a href="commerce.html" class="hover:underline">Commerce</a></li>
+                    <li><a href="salons.html" class="hover:underline">Salons Privés</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section principale : Détails du Royaume de Bavière -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-6">Royaume de Bavière en 1803</h2>
+            <p class="text-lg text-gray-600 mb-12">Le Royaume de Bavière en 1803 est une puissance montante dans le Saint-Empire romain germanique, avec une économie florissante basée sur l'industrie et l'agriculture.</p>
+
+            <!-- Informations clés -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Population -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-users text-blue-600"></i> Population</h3>
+                    <p class="text-gray-600">Population totale : <span class="font-bold">4,000,000</span></p>
+                </div>
+
+                <!-- Armée -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-shield-alt text-red-600"></i> Armée</h3>
+                    <p class="text-gray-600">Forces militaires : <span class="font-bold">30,000 soldats</span></p>
+                </div>
+
+                <!-- Alliances -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-handshake text-green-600"></i> Diplomatie</h3>
+                    <p class="text-gray-600">Alliances : <span class="font-bold">France</span></p>
+                </div>
+            </div>
+
+            <!-- Section Économie -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-6"><i class="fas fa-chart-line text-green-600"></i> Économie</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Revenus et Dépenses -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-coins text-yellow-500"></i> Revenus et Dépenses</h4>
+                        <p class="text-gray-600">Revenus annuels : <span class="font-bold">600,000 pièces d'or</span></p>
+                        <p class="text-gray-600">Dépenses militaires : <span class="font-bold">250,000 pièces d'or</span></p>
+                        <p class="text-gray-600">Balance : <span class="font-bold text-green-600">+350,000 pièces d'or</span></p>
+                    </div>
+
+                    <!-- Ressources en tonnes et prix -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-bold text-gray-700 mb-4"><i class="fas fa-boxes text-green-500"></i> Gestion des Ressources (par tonne)</h4>
+                        <table class="min-w-full bg-white border border-gray-300">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Ressource</th>
+                                    <th class="py-2 px-4 border-b">Quantité (tonnes)</th>
+                                    <th class="py-2 px-4 border-b">Prix par tonne</th>
+                                    <th class="py-2 px-4 border-b">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Agriculture</td>
+                                    <td class="py-2 px-4 border-b">600 tonnes</td>
+                                    <td class="py-2 px-4 border-b">5,000 pièces d'or</td>
+                                    <td class="py-2 px-4 border-b"><button class="bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded">Vendre</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Vin</td>
+                                    <td class="py-2 px-4 border-b">200 tonnes</td>
+                                    <td class="py-2 px-4 border-b">20,000 pièces d'or</td>
+                                    <td class="py-2 px-4 border-b"><button class="bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded">Vendre</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Bois</td>
+                                    <td class="py-2 px-4 border-b">400 tonnes</td>
+                                    <td class="py-2 px-4 border-b">10,000 pièces d'or</td>
+                                    <td class="py-2 px-4 border-b"><button class="bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded">Vendre</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Système de Commerce -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-6"><i class="fas fa-exchange-alt text-blue-600"></i> Système de Commerce</h3>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h4 class="text-2xl font-bold text-gray-700 mb-4">Effectuer un Commerce</h4>
+                    <form id="commerceForm">
+                        <!-- Sélectionner la ressource -->
+                        <label class="block mb-2">Ressource :</label>
+                        <select id="ressource" class="border rounded px-4 py-2 mb-4">
+                            <option value="agriculture">Agriculture</option>
+                            <option value="vin">Vin</option>
+                            <option value="bois">Bois</option>
+                        </select>
+
+                        <!-- Sélectionner la quantité -->
+                        <label class="block mb-2">Quantité (tonnes) :</label>
+                        <input type="number" id="quantite" class="border rounded px-4 py-2 mb-4" min="1" value="1" />
+
+                        <!-- Sélectionner le pays partenaire -->
+                        <label class="block mb-2">Pays partenaire :</label>
+                        <select id="paysPartenaire" class="border rounded px-4 py-2 mb-4">
+                            <option value="france">France</option>
+                            <option value="ottoman">Empire Ottoman</option>
+                            <option value="prusse">Royaume de Prusse</option>
+                        </select>
+
+                        <!-- Type de transport -->
+                        <label class="block mb-2">Type de transport :</label>
+                        <select id="transport" class="border rounded px-4 py-2 mb-4">
+                            <option value="terrestre">Terrestre</option>
+                            <option value="maritime">Maritime</option>
+                        </select>
+
+                        <!-- Bouton de validation -->
+                        <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded" onclick="calculerCommerce()">Valider le Commerce</button>
+                    </form>
+
+                    <!-- Résultat du commerce -->
+                    <div id="resultatCommerce" class="mt-6"></div>
+                </div>
+            </div>
+
+            <!-- Graphique des finances -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-4"><i class="fas fa-chart-area text-blue-600"></i> Évolution des Finances</h3>
+                <div class="relative w-full h-64">
+                    <canvas id="financeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Boutons d'action -->
+            <div class="mt-12 flex items-center space-x-4">
+                <a href="pays-regions.html" class="bg-gray-800 text-white py-2 px-6 rounded">Retour à la liste</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded">Sélectionner ce pays</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 RP Géopolitique Royaume de Bavière. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script pour le graphique des finances et système de commerce -->
+    <script>
+        // Données pour le graphique des finances
+        var financeCtx = document.getElementById('financeChart').getContext('2d');
+        var financeChart = new Chart(financeCtx, {
+            type: 'line',
+            data: {
+                labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
+                datasets: [{
+                    label: 'Revenus',
+                    data: [60000, 65000, 70000, 75000, 80000, 85000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }, {
+                    label: 'Dépenses',
+                    data: [25000, 30000, 27000, 22000, 27000, 29000],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: true
+                }]
+            }
+        });
+
+        // Fonction pour calculer les frais et le résultat du commerce
+        function calculerCommerce() {
+            const ressource = document.getElementById('ressource').value;
+            const quantite = document.getElementById('quantite').value;
+            const paysPartenaire = document.getElementById('paysPartenaire').value;
+            const transport = document.getElementById('transport').value;
+
+            // Prix des ressources
+            const prix = {
+                agriculture: 5000,
+                vin: 20000,
+                bois: 10000
+            };
+
+            // Tarifs douaniers et coûts de transport
+            const tarifs = {
+                terrestre: 0.05, // 5% de frais supplémentaires
+                maritime: 0.1 // 10% de frais supplémentaires
+            };
+
+            // Calcul du coût total
+            const prixTotal = prix[ressource] * quantite;
+            const fraisTransport = prixTotal * tarifs[transport];
+            const totalFinal = prixTotal + fraisTransport;
+
+            // Afficher le résultat
+            const resultat = `Vous avez vendu ${quantite} tonnes de ${ressource} à ${paysPartenaire}. 
+                              Total : ${prixTotal} pièces d'or + ${fraisTransport.toFixed(2)} frais de transport = ${totalFinal.toFixed(2)} pièces d'or.`;
+
+            document.getElementById('resultatCommerce').innerHTML = `<p class="text-green-600 font-bold">${resultat}</p>`;
+        }
+    </script>
+
+</body>
+</html>

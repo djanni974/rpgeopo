@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détails - Empire Ottoman</title>
+  <!-- Tailwind CDN pour les styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Chart.js pour les graphiques -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- En-tête -->
+    <header class="bg-gradient-to-r from-blue-900 to-gray-900 text-white shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4 md:px-8">
+            <h1 class="text-4xl font-bold mb-4 md:mb-0">RP Géopolitique : Empire Ottoman</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:underline">Accueil</a></li>
+                    <li><a href="pays-regions.html" class="hover:underline">Pays & Régions</a></li>
+                    <li><a href="economie.html" class="hover:underline">Économie</a></li>
+                    <li><a href="commerce.html" class="hover:underline">Commerce</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Détails du pays -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-6">Empire Ottoman en 1803</h2>
+            <p class="text-lg text-gray-600 mb-12">L'Empire Ottoman est une puissance historique majeure avec une économie dynamique, des alliances variées, et des défis politiques.</p>
+
+            <!-- Informations générales -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Population -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Population</h3>
+                    <p class="text-gray-600">Population actuelle : <span id="population">25,000,000</span> habitants</p>
+                    <button onclick="augmenterPopulation()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Augmenter Population</button>
+                </div>
+
+                <!-- Stabilité politique -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Stabilité politique</h3>
+                    <p class="text-gray-600">Stabilité actuelle : <span id="stabilite">75%</span></p>
+                    <button onclick="ameliorerStabilite()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Améliorer la stabilité</button>
+                    <button onclick="declencherGuerre()" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded mt-4">Déclarer la guerre</button>
+                </div>
+
+                <!-- Commerce international -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Commerce international</h3>
+                    <p class="text-gray-600">Nombre de routes commerciales : <span id="routes">3</span></p>
+                    <button onclick="ajouterRouteCommerciale('terrestre')" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded mt-4">Créer une route terrestre</button>
+                    <button onclick="ajouterRouteCommerciale('maritime')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Créer une route maritime</button>
+                </div>
+
+                <!-- Gestion des impôts -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Gestion des impôts</h3>
+                    <p class="text-gray-600">Taux d'imposition actuel :</p>
+                    <ul class="text-gray-600">
+                        <li>Basses classes : <span id="impot-bas">10%</span></li>
+                        <li>Classes moyennes : <span id="impot-moyen">20%</span></li>
+                        <li>Haute société : <span id="impot-haut">30%</span></li>
+                    </ul>
+                    <button onclick="ajusterImpot()" class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded mt-4">Ajuster les impôts</button>
+                </div>
+
+                <!-- Armée -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Armée</h3>
+                    <p class="text-gray-600">Forces militaires : <span id="armee">150,000</span> soldats</p>
+                    <button onclick="recruterSoldats()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4">Recruter des soldats</button>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Infrastructures</h3>
+                    <p class="text-gray-600">Niveau d'infrastructure : <span id="infrastructure">Moyen</span></p>
+                    <button onclick="ameliorerInfrastructure()" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded mt-4">Améliorer les infrastructures</button>
+                </div>
+
+            </div>
+
+            <!-- Graphique économique -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-4">Économie</h3>
+                <canvas id="economyChart" class="w-full h-64"></canvas>
+            </div>
+
+            <!-- Boutons d'actions -->
+            <div class="mt-12 flex items-center space-x-4">
+                <a href="pays-regions.html" class="bg-gray-800 text-white py-2 px-6 rounded">Retour à la liste</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded">Gérer ce pays</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 RP Géopolitique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts pour les interactions avancées -->
+    <script>
+        // Variables globales
+        let population = 25000000;
+        let armee = 150000;
+        let stabilite = 75;
+        let routesCommerciales = 3;
+        let infrastructure = "Moyen";
+        let economyData = [50000, 60000, 55000, 70000, 80000];
+        let impots = {
+            bas: 10,
+            moyen: 20,
+            haut: 30
+        };
+
+        // Augmenter la population
+        function augmenterPopulation() {
+            population += 100000;
+            document.getElementById('population').innerText = population.toLocaleString();
+        }
+
+        // Recruter des soldats
+        function recruterSoldats() {
+            if (population >= 100000) {
+                armee += 10000;
+                population -= 100000;
+                document.getElementById('armee').innerText = armee.toLocaleString();
+                document.getElementById('population').innerText = population.toLocaleString();
+            } else {
+                alert('Pas assez de population pour recruter des soldats.');
+            }
+        }
+
+        // Améliorer la stabilité politique
+        function ameliorerStabilite() {
+            stabilite += 5;
+            if (stabilite > 100) stabilite = 100;
+            document.getElementById('stabilite').innerText = stabilite + '%';
+        }
+
+        // Déclarer la guerre (réduit la stabilité)
+        function declencherGuerre() {
+            stabilite -= 10;
+            if (stabilite < 0) stabilite = 0;
+            document.getElementById('stabilite').innerText = stabilite + '%';
+            alert('Guerre déclarée ! Stabilité réduite.');
+        }
+
+        // Ajouter des routes commerciales
+        function ajouterRouteCommerciale(type) {
+            routesCommerciales += 1;
+            document.getElementById('routes').innerText = routesCommerciales;
+            alert(`Route commerciale ${type} ajoutée.`);
+        }
+
+        // Ajuster les impôts
+        function ajusterImpot() {
+            let bas = prompt('Nouveau taux d\'imposition pour les basses classes (%)', impots.bas);
+            let moyen = prompt('Nouveau taux d\'imposition pour les classes moyennes (%)', impots.moyen);
+            let haut = prompt('Nouveau taux d\'imposition pour la haute société (%)', impots.haut);
+
+            impots.bas = parseInt(bas);
+            impots.moyen = parseInt(moyen);
+            impots.haut = parseInt(haut);
+
+            document.getElementById('impot-bas').innerText = impots.bas + '%';
+            document.getElementById('impot-moyen').innerText = impots.moyen + '%';
+            document.getElementById('impot-haut').innerText = impots.haut + '%';
+        }
+
+        // Améliorer les infrastructures
+        function ameliorerInfrastructure() {
+            if (infrastructure === "Moyen") {
+                infrastructure = "Élevé";
+            } else if (infrastructure === "Bas") {
+                infrastructure = "Moyen";
+            } else {
+                alert("Infrastructures déjà au maximum.");
+                return;
+            }
+            document.getElementById('infrastructure').innerText = infrastructure;
+        }
+
+        // Graphique économique avec Chart.js
+        const economyCtx = document.getElementById('economyChart').getContext('2d');
+        const economyChart = new Chart(economyCtx, {
+            type: 'line',
+            data: {
+                labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
+                datasets: [{
+                    label: 'Revenus économiques',
+                    data: economyData,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            }
+        });
+    </script>
+
+</body>
+</html>
